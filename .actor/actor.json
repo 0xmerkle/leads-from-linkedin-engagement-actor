@@ -1,0 +1,16 @@
+{
+    "actorSpecification": 1,
+    "name": "linkedin-engagement-leads",
+    "title": "LinkedIn Engagement Leads",
+    "description": "Find everyone who commented on or reacted to LinkedIn posts you choose, look up who they actually work for, and drop the target's own staff, company pages and job seekers.",
+    "version": "0.0",
+    "buildTag": "latest",
+    "meta": {
+        "generatedBy": "Claude Code with Claude Opus 5"
+    },
+    "input": "./input_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "dockerfile": "../Dockerfile"
+}

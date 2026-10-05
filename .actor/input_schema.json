@@ -1,0 +1,38 @@
+{
+    "title": "LinkedIn Engagement Leads",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "targets": {
+            "title": "Target LinkedIn URLs",
+            "type": "array",
+            "editor": "stringList",
+            "description": "Personal profile URLs and/or company page URLs, mixed freely \u2014 routing is automatic. Personal profiles reliably produce better leads than company pages, whose engagement is mostly their own staff. Accepts URLs with or without protocol, trailing slash, locale prefix or query string.",
+            "prefill": ["https://www.linkedin.com/in/some-operator", "https://www.linkedin.com/company/a-competitor"]
+        },
+        "postedWithin": {
+            "title": "Only posts from the last\u2026",
+            "type": "string",
+            "enum": ["24h", "48h", "week", "2weeks", "month"],
+            "enumTitles": ["24 hours", "48 hours", "Week", "2 weeks", "Month"],
+            "default": "week",
+            "description": "The Actor pages backwards through each target's posts and stops as soon as it crosses this boundary, so it never walks a back catalogue. Pick a window slightly wider than your schedule interval."
+        },
+        "maxEngagersPerPost": {
+            "title": "Max people per post",
+            "type": "integer",
+            "default": 30,
+            "minimum": 1,
+            "maximum": 100,
+            "description": "Applied separately to commenters and reactors, so 30 means up to 30 of each per post. This is the main cost control: every person found and every profile enriched is a billed upstream result.",
+            "sectionCaption": "Volume and cost"
+        },
+        "excludeJobSeekers": {
+            "title": "Drop people who are open to work",
+            "type": "boolean",
+            "default": true,
+            "description": "Uses LinkedIn's own open-to-work flag from the person's profile, not a guess based on their headline. Turn it off if you are recruiting rather than selling."
+        }
+    },
+    "required": ["targets"]
+}

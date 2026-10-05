@@ -1,0 +1,74 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "People",
+            "description": "One row per person who engaged. Commenters first, then whoever showed up most often.",
+            "transformation": {
+                "fields": [
+                    "name",
+                    "currentTitle",
+                    "currentCompany",
+                    "profileUrl",
+                    "commentText",
+                    "engagementType",
+                    "timesSeen",
+                    "targetsEngaged",
+                    "postUrl",
+                    "commentedAt",
+                    "enriched"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "name": {
+                        "label": "Name",
+                        "format": "text"
+                    },
+                    "currentTitle": {
+                        "label": "Title",
+                        "format": "text"
+                    },
+                    "currentCompany": {
+                        "label": "Company",
+                        "format": "text"
+                    },
+                    "profileUrl": {
+                        "label": "Profile",
+                        "format": "link"
+                    },
+                    "commentText": {
+                        "label": "What they said",
+                        "format": "text"
+                    },
+                    "engagementType": {
+                        "label": "Type",
+                        "format": "text"
+                    },
+                    "timesSeen": {
+                        "label": "Times seen",
+                        "format": "number"
+                    },
+                    "targetsEngaged": {
+                        "label": "Targets",
+                        "format": "array"
+                    },
+                    "postUrl": {
+                        "label": "Post",
+                        "format": "link"
+                    },
+                    "commentedAt": {
+                        "label": "When",
+                        "format": "date"
+                    },
+                    "enriched": {
+                        "label": "Verified",
+                        "format": "boolean"
+                    }
+                }
+            }
+        }
+    }
+}

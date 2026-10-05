@@ -1,0 +1,3 @@
+.prettierignore
+package-lock.json
+dist
